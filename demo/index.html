@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>FileSaver.js 是一款基于 HTML5 完成文件保存的插件，它可以帮我们直接从网页中导出多种格式文件。 原文出自：www.hangge.com 转载请保留原文链接：http://www.hangge.com/blog/cache/detail_1795.html</title>
+    <script src="../jquery-3.0.0.min.js" charset="utf-8"></script>
+    <script src="../FileSaver.js" charset="utf-8"></script>
+</head>
+
+<body>
+    <input type="button" value="导出文件" id="exportA">
+</body>
+
+</html>
+<script>
+    $('#exportA').on('click', function() {
+        var blob = new Blob(["欢迎访问 hangge.com"], {
+            type: "text/plain;charset=utf-8"
+        });
+        saveAs(blob, "文件导出测试2.txt");
+    })
+</script>
